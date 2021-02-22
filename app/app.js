@@ -7,10 +7,15 @@
  */
 
 import * as React from 'react'
-import { View } from 'react-native'
+import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context'
+import { RootNavigator } from './navigation'
 
 const App = () => {
-  return <View />
+  return (
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <RootNavigator />
+    </SafeAreaProvider>
+  )
 }
 
 export default App
