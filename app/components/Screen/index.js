@@ -50,15 +50,6 @@ function ScreenWithScrolling(props: ScreenProps) {
   )
 }
 
-function Screen(props) {
-  console.log('🚀 ~ file: index.js ~ line 54 ~ Screen ~ props', props.preset)
-  if (isNonScrolling(props.preset)) {
-    console.log('aqui')
-    return <ScreenWithoutScrolling {...props} />
-  } else {
-    console.log('aqui 2')
-    return <ScreenWithScrolling {...props} />
-  }
-}
+function Screen(props) {}
 
 export { Screen }
