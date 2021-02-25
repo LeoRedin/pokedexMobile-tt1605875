@@ -1,12 +1,21 @@
 import * as React from 'react'
-import { View, Text } from 'react-native'
+import { View, Button, Text, StyleSheet } from 'react-native'
 
 function Settings() {
   return (
-    <View>
-      <Text>Confgurações</Text>
+    <View style={styles.center}>
+      <Text>Essa é a Settings screen</Text>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+})
 
 export { Settings }

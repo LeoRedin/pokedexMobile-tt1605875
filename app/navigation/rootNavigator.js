@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { MainStackNavigator } from './stackNavigator'
+import { DrawerNavigator } from './drawerNavigation'
 
 function RootNavigator() {
   return (
     <NavigationContainer>
-      <MainStackNavigator />
+      <DrawerNavigator />
     </NavigationContainer>
   )
 }
