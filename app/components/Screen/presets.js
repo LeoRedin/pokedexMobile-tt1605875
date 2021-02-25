@@ -29,7 +29,6 @@ const presets = {
 }
 
 function isNonScrolling(preset) {
-  console.log('🚀 ~ file: presets.js ~ line 24 ~ isNonScrolling ~ preset', preset)
   return isNil(preset) || !preset.length || isNil(presets[preset]) || preset === 'fixed'
 }
 

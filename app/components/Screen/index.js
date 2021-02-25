@@ -24,7 +24,7 @@ function ScreenWithoutScrolling(props) {
   )
 }
 
-function ScreenWithScrolling(props: ScreenProps) {
+function ScreenWithScrolling(props) {
   const insets = useSafeAreaInsets()
   const preset = presets.scroll
   const style = props.style || {}
@@ -50,6 +50,13 @@ function ScreenWithScrolling(props: ScreenProps) {
   )
 }
 
-function Screen(props) {}
+function Screen(props) {
+  /* preset => fixed || scroll */
+  if (isNonScrolling(props.preset)) {
+    return <ScreenWithoutScrolling {...props} />
+  } else {
+    return <ScreenWithScrolling {...props} />
+  }
+}
 
 export { Screen }
