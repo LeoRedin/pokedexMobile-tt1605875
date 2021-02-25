@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { View, Button, Text, StyleSheet } from 'react-native'
 
-function Home({ navigation }) {
+function About({ navigation }) {
   return (
     <View style={styles.center}>
-      <Text>Essa é a home screen</Text>
-      <Button onPress={() => navigation.navigate('Sobre')} title="Ir para a página Sobre" />
+      <Text>Essa é a tela sobre</Text>
+      <Button onPress={() => navigation.navigate('Home')} title="Ir para a Home" />
     </View>
   )
 }
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export { Home }
+export { About }
