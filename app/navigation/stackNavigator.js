@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { Home, About, Notifications, Settings } from '../screens'
+import { Home, About, Notifications, Settings, Login } from '../screens'
 
 const Stack = createStackNavigator()
 
@@ -39,4 +39,17 @@ function SettingsStackNavigator() {
   )
 }
 
-export { MainStackNavigator, NotificationsStackNavigator, SettingsStackNavigator }
+function AuthenticationStackNavigator({ login }) {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Login" component={() => <Login makeLogin={login} />} />
+    </Stack.Navigator>
+  )
+}
+
+export {
+  MainStackNavigator,
+  NotificationsStackNavigator,
+  SettingsStackNavigator,
+  AuthenticationStackNavigator,
+}
